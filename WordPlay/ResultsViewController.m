@@ -49,15 +49,15 @@
 
 -(NSMutableAttributedString *)createStory {
 
-    NSMutableAttributedString *story = [[NSMutableAttributedString alloc] initWithAttributedString:[self makeAttributedSimple:@"One day, "]];
+    NSMutableAttributedString *story = [[NSMutableAttributedString alloc] initWithAttributedString:[self makeAttributedSimple:@"This morning "]];
     [story appendAttributedString:[self makeAttributed:self.name]];
-    [story appendAttributedString:[self makeAttributedSimple:@" was walking into Mobile Makers when he noticed how "]];
+    [story appendAttributedString:[self makeAttributedSimple:@" checked tomorrow's "]];
     [story appendAttributedString:[self makeAttributed:self.adjective]];
-    [story appendAttributedString:[self makeAttributedSimple:@" his students were. They "]];
+    [story appendAttributedString:[self makeAttributedSimple:@" coding challenge to "]];
     [story appendAttributedString:[self makeAttributed:self.verb]];
-    [story appendAttributedString:[self makeAttributedSimple:@" very "]];
+    [story appendAttributedString:[self makeAttributedSimple:@" if programming "]];
     [story appendAttributedString:[self makeAttributed:self.adverb]];
-    [story appendAttributedString:[self makeAttributedSimple:@"."]];
+    [story appendAttributedString:[self makeAttributedSimple:@" would help."]];
 
     return story;
 }
