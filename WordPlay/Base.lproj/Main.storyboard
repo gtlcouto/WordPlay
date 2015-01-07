@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="6Z0-tK-fVp">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="6Z0-tK-fVp">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
     </dependencies>
@@ -83,7 +83,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="URE-wb-zet" kind="push" id="n0R-0M-qa7"/>
+                                    <segue destination="URE-wb-zet" kind="push" identifier="toAdjectiveSegue" id="n0R-0M-qa7"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -119,7 +119,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter an adjective:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lrj-Lf-J6d">
-                                <rect key="frame" x="88.5" y="158" width="143" height="21"/>
+                                <rect key="frame" x="89" y="158" width="143" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="4Is-PO-eIr"/>
                                     <constraint firstAttribute="width" constant="143" id="cWM-cj-pEL"/>
@@ -129,16 +129,16 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VJJ-6Q-bbl">
-                                <rect key="frame" x="117" y="269" width="86" height="30"/>
+                                <rect key="frame" x="144" y="269" width="32" height="30"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="86" id="V7O-Ze-8yq"/>
+                                    <constraint firstAttribute="width" constant="32" id="V7O-Ze-8yq"/>
                                     <constraint firstAttribute="height" constant="30" id="g03-fq-eH6"/>
                                 </constraints>
-                                <state key="normal" title="See mad lib!">
+                                <state key="normal" title="Next">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="3kP-cb-059" kind="push" id="Lpr-7a-BGP"/>
+                                    <segue destination="xyg-h8-JpG" kind="push" identifier="toVerbSegue" id="6MD-0C-kxd"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CzI-eF-5Z7">
@@ -169,6 +169,136 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="poN-ZZ-A5N" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1360" y="956"/>
+        </scene>
+        <!--Enter Verb View Controller-->
+        <scene sceneID="5FE-qz-Fga">
+            <objects>
+                <viewController id="xyg-h8-JpG" customClass="EnterVerbViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ZwL-0g-4Tf"/>
+                        <viewControllerLayoutGuide type="bottom" id="h7T-Lf-0hg"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="UvI-jL-745">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter a verb" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x0X-EP-Oti">
+                                <rect key="frame" x="114" y="158" width="93" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="93" id="4vm-JQ-m5F"/>
+                                    <constraint firstAttribute="height" constant="21" id="gQS-xo-Imr"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bIY-SZ-FDM">
+                                <rect key="frame" x="144" y="269" width="32" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="2Lx-gj-MJR"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="32" id="4Ou-jQ-X3Z"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="BaM-nA-sNP"/>
+                                    <constraint firstAttribute="width" constant="32" id="GXj-Sn-cTm"/>
+                                </constraints>
+                                <state key="normal" title="Next">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="y2d-b1-Cwj" kind="push" identifier="toResultsSegue" id="aUo-77-bBy"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Lve-4x-ET5">
+                                <rect key="frame" x="112" y="209" width="97" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="97" id="StP-I9-Bb8"/>
+                                    <constraint firstAttribute="height" constant="30" id="Twx-vO-57W"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="bIY-SZ-FDM" secondAttribute="centerX" id="2Yt-IF-ges"/>
+                            <constraint firstAttribute="centerX" secondItem="x0X-EP-Oti" secondAttribute="centerX" id="Byh-cL-lgO"/>
+                            <constraint firstAttribute="centerY" secondItem="bIY-SZ-FDM" secondAttribute="centerY" id="MDd-1D-tHC"/>
+                            <constraint firstAttribute="centerX" secondItem="Lve-4x-ET5" secondAttribute="centerX" id="MTS-cL-2IG"/>
+                            <constraint firstItem="Lve-4x-ET5" firstAttribute="top" secondItem="x0X-EP-Oti" secondAttribute="bottom" constant="30" id="fVQ-WU-Woe"/>
+                            <constraint firstItem="bIY-SZ-FDM" firstAttribute="top" secondItem="Lve-4x-ET5" secondAttribute="bottom" constant="30" id="gQR-cH-TOB"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="pKU-p6-Bbt"/>
+                    <connections>
+                        <outlet property="verbTextField" destination="Lve-4x-ET5" id="J2i-lR-syR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Akf-Q1-weS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1772" y="956"/>
+        </scene>
+        <!--Enter Adverb View Controller-->
+        <scene sceneID="Q02-UO-djl">
+            <objects>
+                <viewController id="y2d-b1-Cwj" customClass="EnterAdverbViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="u3q-hN-gYu"/>
+                        <viewControllerLayoutGuide type="bottom" id="ri1-k3-ONc"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="sQo-4j-H8L">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter an adverb" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AzI-8Z-DQB">
+                                <rect key="frame" x="99" y="158" width="122" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="HKr-z6-bIi"/>
+                                    <constraint firstAttribute="width" constant="122" id="hBL-M0-hFV"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n0E-gW-Glr">
+                                <rect key="frame" x="107" y="269" width="106" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="106" id="cHF-TG-eiw"/>
+                                    <constraint firstAttribute="height" constant="30" id="gfW-Pe-DD7"/>
+                                </constraints>
+                                <state key="normal" title="See my madlib!">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="3kP-cb-059" kind="push" id="btP-PL-bmI"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ycj-fS-bc8">
+                                <rect key="frame" x="112" y="209" width="97" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="97" id="M6U-FI-R6e"/>
+                                    <constraint firstAttribute="height" constant="30" id="sw6-pj-vXN"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="n0E-gW-Glr" secondAttribute="centerX" id="4IF-Fn-vNr"/>
+                            <constraint firstAttribute="centerY" secondItem="n0E-gW-Glr" secondAttribute="centerY" id="6HW-DD-4vx"/>
+                            <constraint firstItem="Ycj-fS-bc8" firstAttribute="top" secondItem="AzI-8Z-DQB" secondAttribute="bottom" constant="30" id="DNe-Hz-Mvz"/>
+                            <constraint firstAttribute="centerX" secondItem="Ycj-fS-bc8" secondAttribute="centerX" id="IfA-mN-3qz"/>
+                            <constraint firstItem="n0E-gW-Glr" firstAttribute="top" secondItem="Ycj-fS-bc8" secondAttribute="bottom" constant="30" id="NNx-bz-vKx"/>
+                            <constraint firstAttribute="centerX" secondItem="AzI-8Z-DQB" secondAttribute="centerX" id="vj1-n2-Fje"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="lP1-qf-zuV"/>
+                    <connections>
+                        <outlet property="adverbTextField" destination="Ycj-fS-bc8" id="IY3-OU-wzL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TiY-Fr-8qW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2182" y="956"/>
         </scene>
         <!--Results View Controller-->
         <scene sceneID="7Fr-EY-50x">
@@ -222,7 +352,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ihq-D3-RDp" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="ecw-rr-YWt" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1746" y="956"/>
+            <point key="canvasLocation" x="2589" y="956"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="cOq-sz-I3w">

@@ -17,6 +17,8 @@
 		603FC8351A5CAC9800B4F4A4 /* EnterNameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 603FC8341A5CAC9800B4F4A4 /* EnterNameViewController.m */; };
 		603FC8381A5CAD4F00B4F4A4 /* EnterAdjectiveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 603FC8371A5CAD4F00B4F4A4 /* EnterAdjectiveViewController.m */; };
 		603FC83B1A5CAE0200B4F4A4 /* ResultsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 603FC83A1A5CAE0200B4F4A4 /* ResultsViewController.m */; };
+		603FC83E1A5CBAEC00B4F4A4 /* EnterVerbViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 603FC83D1A5CBAEC00B4F4A4 /* EnterVerbViewController.m */; };
+		603FC8411A5CBAFA00B4F4A4 /* EnterAdverbViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 603FC8401A5CBAFA00B4F4A4 /* EnterAdverbViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,10 @@
 		603FC8371A5CAD4F00B4F4A4 /* EnterAdjectiveViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EnterAdjectiveViewController.m; sourceTree = "<group>"; };
 		603FC8391A5CAE0200B4F4A4 /* ResultsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResultsViewController.h; sourceTree = "<group>"; };
 		603FC83A1A5CAE0200B4F4A4 /* ResultsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResultsViewController.m; sourceTree = "<group>"; };
+		603FC83C1A5CBAEC00B4F4A4 /* EnterVerbViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EnterVerbViewController.h; sourceTree = "<group>"; };
+		603FC83D1A5CBAEC00B4F4A4 /* EnterVerbViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EnterVerbViewController.m; sourceTree = "<group>"; };
+		603FC83F1A5CBAFA00B4F4A4 /* EnterAdverbViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EnterAdverbViewController.h; sourceTree = "<group>"; };
+		603FC8401A5CBAFA00B4F4A4 /* EnterAdverbViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EnterAdverbViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +99,10 @@
 				603FC8111A5CAA4C00B4F4A4 /* AppDelegate.h */,
 				603FC8391A5CAE0200B4F4A4 /* ResultsViewController.h */,
 				603FC83A1A5CAE0200B4F4A4 /* ResultsViewController.m */,
+				603FC83C1A5CBAEC00B4F4A4 /* EnterVerbViewController.h */,
+				603FC83D1A5CBAEC00B4F4A4 /* EnterVerbViewController.m */,
+				603FC83F1A5CBAFA00B4F4A4 /* EnterAdverbViewController.h */,
+				603FC8401A5CBAFA00B4F4A4 /* EnterAdverbViewController.m */,
 				603FC8121A5CAA4C00B4F4A4 /* AppDelegate.m */,
 				603FC8141A5CAA4C00B4F4A4 /* RootViewController.h */,
 				603FC8331A5CAC9800B4F4A4 /* EnterNameViewController.h */,
@@ -235,11 +245,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				603FC8161A5CAA4C00B4F4A4 /* RootViewController.m in Sources */,
+				603FC83E1A5CBAEC00B4F4A4 /* EnterVerbViewController.m in Sources */,
 				603FC8131A5CAA4C00B4F4A4 /* AppDelegate.m in Sources */,
 				603FC8381A5CAD4F00B4F4A4 /* EnterAdjectiveViewController.m in Sources */,
 				603FC83B1A5CAE0200B4F4A4 /* ResultsViewController.m in Sources */,
 				603FC8351A5CAC9800B4F4A4 /* EnterNameViewController.m in Sources */,
 				603FC8101A5CAA4C00B4F4A4 /* main.m in Sources */,
+				603FC8411A5CBAFA00B4F4A4 /* EnterAdverbViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

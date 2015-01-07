@@ -1,20 +1,20 @@
 //
-//  EnterNameViewController.m
+//  EnterVerbViewController.m
 //  WordPlay
 //
 //  Created by Yi-Chin Sun on 1/6/15.
 //  Copyright (c) 2015 Yi-Chin Sun. All rights reserved.
 //
 
-#import "EnterNameViewController.h"
-#import "EnterAdjectiveViewController.h"
+#import "EnterVerbViewController.h"
+#import "EnterAdverbViewController.h"
 
-@interface EnterNameViewController ()
-@property (strong, nonatomic) IBOutlet UITextField *nameTextField;
+@interface EnterVerbViewController ()
+@property (strong, nonatomic) IBOutlet UITextField *verbTextField;
 
 @end
 
-@implementation EnterNameViewController
+@implementation EnterVerbViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -28,23 +28,26 @@
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    EnterAdjectiveViewController *vc = segue.destinationViewController;
-    vc.name = self.nameTextField.text;
+    EnterAdverbViewController *vc = segue.destinationViewController;
+    vc.name = self.name;
+    vc.adjective = self.adjective;
+    vc.verb = self.verbTextField.text;
 }
 
 - (BOOL)shouldPerformSegueWithIdentifier:(NSString *)identifier sender:(id)sender
 {
-    if ([identifier isEqualToString:@"toAdjectiveSegue"])
+    if ([identifier isEqualToString:@"toAdverbSegue"])
     {
 
-        if (!(self.nameTextField.text && self.nameTextField.text.length > 0))
+        if (!(self.verbTextField.text && self.verbTextField.text.length > 0))
         {
             return NO;
         }
     }
     return YES;
-
+    
 }
+
 
 /*
 #pragma mark - Navigation
