@@ -2,8 +2,8 @@
 // ResultsViewController.m
 // WordPlay
 //
-// Created by Yi-Chin Sun on 1/6/15.
-// Copyright (c) 2015 Yi-Chin Sun. All rights reserved.
+// Created by Yi-Chin Sun and Gustavo Couto on 1/6/15.
+// Copyright (c) 2015 Yi-Chin Sun and Gustavo Couto. All rights reserved.
 //
 
 #import "ResultsViewController.h"
@@ -19,15 +19,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
+    //creating the story - > go to createStory function
     self.resultsTextView.attributedText = [self createStory];
-
-    UIImage *buttonImage = [[UIImage imageNamed:@"blackButton.png"]
-                            resizableImageWithCapInsets:UIEdgeInsetsMake(20, 20, 20, 20)];
-    UIImage *buttonImageHighlight = [[UIImage imageNamed:@"blackButtonHighlight.png"]
-                                     resizableImageWithCapInsets:UIEdgeInsetsMake(20, 20, 20, 20)];
-    // Set the background for any states you plan to use
-    [self.startOverButton setBackgroundImage:buttonImage forState:UIControlStateNormal];
-    [self.startOverButton setBackgroundImage:buttonImageHighlight forState:UIControlStateHighlighted];
 
 }
 
@@ -36,26 +29,41 @@
     // Dispose of any resources that can be recreated.
 }
 
+//name: makeAttributed
+//returns: NSMutableAttributedString *
+//takes: NSString *
+//description: transforms a string into an attributed string BOLD
 -(NSMutableAttributedString *)makeAttributed:(NSString *)replacedString{
     NSMutableAttributedString * attString = [[NSMutableAttributedString alloc] initWithString:replacedString];
 
     [attString addAttribute:NSFontAttributeName
-                      value:[UIFont fontWithName:@"Helvetica-Bold" size:16.0]
+                      value:[UIFont fontWithName:@"Helvetica-Bold" size:22.0]
                       range:NSMakeRange(0,replacedString.length)];
 
     return attString;
 
 }
 
-
+//name: makeAttributedSimple
+//returns: NSMutableAttributedString *
+//takes: NSString *
+//description: transforms a string into an attributed string NON BOLD
 -(NSMutableAttributedString *)makeAttributedSimple:(NSString *)replacedString{
     NSMutableAttributedString * attString = [[NSMutableAttributedString alloc] initWithString:replacedString];
+
+    [attString addAttribute:NSFontAttributeName
+                      value:[UIFont fontWithName:@"Helvetica" size:20.0]
+                      range:NSMakeRange(0,replacedString.length)];
 
     return attString;
 }
 
 
 
+//Name: createStory
+//returns: NSMutableAttributedString *
+//takes: nothing
+//description: append all of the attributed strings created by the helper methods makeAttributed and makeAttributedSimple
 -(NSMutableAttributedString *)createStory {
 
     NSMutableAttributedString *story = [[NSMutableAttributedString alloc] initWithAttributedString:[self makeAttributedSimple:@"This morning "]];
@@ -71,10 +79,11 @@
     return story;
 }
 
--(NSString* )stringReplacer:(NSRange)range {
-    NSString *returnString = [@"" stringByPaddingToLength:range.length withString:@"-" startingAtIndex:0];
-    return returnString;
-}
+//Useless function was used to replace strings with the correct ammount of "-"
+//-(NSString* )stringReplacer:(NSRange)range {
+//    NSString *returnString = [@"" stringByPaddingToLength:range.length withString:@"-" startingAtIndex:0];
+//    return returnString;
+//}
 
 /*
  #pragma mark - Navigation

@@ -17,6 +17,17 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    //making the buttons prettier
+    UIImage *buttonImage = [[UIImage imageNamed:@"blackButton.png"]
+                            resizableImageWithCapInsets:UIEdgeInsetsMake(20, 20, 20, 20)];
+    UIImage *buttonImageHighlight = [[UIImage imageNamed:@"blackButtonHighlight.png"]
+                                     resizableImageWithCapInsets:UIEdgeInsetsMake(20, 20, 20, 20)];
+
+    [[UIButton appearance] setBackgroundImage:buttonImage forState:UIControlStateNormal];
+    [[UIButton appearance] setBackgroundImage:buttonImageHighlight forState:UIControlStateHighlighted];
+    [[UIButton appearance] setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+
+
     return YES;
 }
 

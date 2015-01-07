@@ -2,7 +2,7 @@
 //  EnterAdverbViewController.m
 //  WordPlay
 //
-//  Created by Yi-Chin Sun on 1/6/15.
+//  Created by Yi-Chin Sun and Gustavo Couto on 1/6/15.
 //  Copyright (c) 2015 Yi-Chin Sun. All rights reserved.
 //
 
@@ -19,13 +19,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-       UIImage *buttonImage = [[UIImage imageNamed:@"blackButton.png"]
-                                resizableImageWithCapInsets:UIEdgeInsetsMake(20, 20, 20, 20)];
-    UIImage *buttonImageHighlight = [[UIImage imageNamed:@"blackButtonHighlight.png"]
-                                     resizableImageWithCapInsets:UIEdgeInsetsMake(20, 20, 20, 20)];
-    // Set the background for any states you plan to use
-    [self.seeLibButton setBackgroundImage:buttonImage forState:UIControlStateNormal];
-    [self.seeLibButton setBackgroundImage:buttonImageHighlight forState:UIControlStateHighlighted];
+
 }
 
 - (void)didReceiveMemoryWarning {
@@ -33,6 +27,7 @@
     // Dispose of any resources that can be recreated.
 }
 
+//preparing for segue to - > results
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     ResultsViewController *vc = segue.destinationViewController;
@@ -42,6 +37,7 @@
     vc.adverb = self.adverbTextField.text;
 }
 
+//cancel segue if condition is not met
 - (BOOL)shouldPerformSegueWithIdentifier:(NSString *)identifier sender:(id)sender
 {
     if ([identifier isEqualToString:@"toResultsSegue"])

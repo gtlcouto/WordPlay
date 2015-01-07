@@ -2,8 +2,8 @@
 //  ViewController.m
 //  WordPlay
 //
-//  Created by Yi-Chin Sun on 1/6/15.
-//  Copyright (c) 2015 Yi-Chin Sun. All rights reserved.
+//  Created by Yi-Chin Sun and Gustavo Couto on 1/6/15.
+//  Copyright (c) 2015 Yi-Chin Sun and Gustavo Couto. All rights reserved.
 //
 
 #import "RootViewController.h"
@@ -17,13 +17,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    UIImage *buttonImage = [[UIImage imageNamed:@"blackButton.png"]
-                            resizableImageWithCapInsets:UIEdgeInsetsMake(20, 20, 20, 20)];
-    UIImage *buttonImageHighlight = [[UIImage imageNamed:@"blackButtonHighlight.png"]
-                                     resizableImageWithCapInsets:UIEdgeInsetsMake(20, 20, 20, 20)];
-    // Set the background for any states you plan to use
-    [self.startButton setBackgroundImage:buttonImage forState:UIControlStateNormal];
-    [self.startButton setBackgroundImage:buttonImageHighlight forState:UIControlStateHighlighted];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -31,6 +24,7 @@
     // Dispose of any resources that can be recreated.
 }
 
+//preparing for segue to - > name
 -(IBAction)prepareForUnwind:(UIStoryboardSegue *)segue {
 }
 

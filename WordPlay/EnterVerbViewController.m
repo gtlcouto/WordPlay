@@ -2,8 +2,8 @@
 //  EnterVerbViewController.m
 //  WordPlay
 //
-//  Created by Yi-Chin Sun on 1/6/15.
-//  Copyright (c) 2015 Yi-Chin Sun. All rights reserved.
+//  Created by Yi-Chin Sun and Gustavo Couto on 1/6/15.
+//  Copyright (c) 2015 Yi-Chin Sun and Gustavo Couto. All rights reserved.
 //
 
 #import "EnterVerbViewController.h"
@@ -19,13 +19,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    UIImage *buttonImage = [[UIImage imageNamed:@"blackButton.png"]
-                            resizableImageWithCapInsets:UIEdgeInsetsMake(20, 20, 20, 20)];
-    UIImage *buttonImageHighlight = [[UIImage imageNamed:@"blackButtonHighlight.png"]
-                                     resizableImageWithCapInsets:UIEdgeInsetsMake(20, 20, 20, 20)];
-    // Set the background for any states you plan to use
-    [self.nextButton setBackgroundImage:buttonImage forState:UIControlStateNormal];
-    [self.nextButton setBackgroundImage:buttonImageHighlight forState:UIControlStateHighlighted];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -33,6 +26,7 @@
     // Dispose of any resources that can be recreated.
 }
 
+//preparing for segue to - > adverb
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     EnterAdverbViewController *vc = segue.destinationViewController;
@@ -41,6 +35,7 @@
     vc.verb = self.verbTextField.text;
 }
 
+//cancel the segue if condition is not met
 - (BOOL)shouldPerformSegueWithIdentifier:(NSString *)identifier sender:(id)sender
 {
     if ([identifier isEqualToString:@"toAdverbSegue"])

@@ -2,8 +2,8 @@
 //  EnterNameViewController.m
 //  WordPlay
 //
-//  Created by Yi-Chin Sun on 1/6/15.
-//  Copyright (c) 2015 Yi-Chin Sun. All rights reserved.
+//  Created by Yi-Chin Sun and Gustavo Couto on 1/6/15.
+//  Copyright (c) 2015 Yi-Chin Sun and Gustavo Couto. All rights reserved.
 //
 
 #import "EnterNameViewController.h"
@@ -20,13 +20,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    UIImage *buttonImage = [[UIImage imageNamed:@"blackButton.png"]
-                            resizableImageWithCapInsets:UIEdgeInsetsMake(20, 20, 20, 20)];
-    UIImage *buttonImageHighlight = [[UIImage imageNamed:@"blackButtonHighlight.png"]
-                                     resizableImageWithCapInsets:UIEdgeInsetsMake(20, 20, 20, 20)];
-    // Set the background for any states you plan to use
-    [self.nextButton setBackgroundImage:buttonImage forState:UIControlStateNormal];
-    [self.nextButton setBackgroundImage:buttonImageHighlight forState:UIControlStateHighlighted];
+
 
 }
 
@@ -35,17 +29,19 @@
     // Dispose of any resources that can be recreated.
 }
 
+//preparing for segue to - > adjective
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     EnterAdjectiveViewController *vc = segue.destinationViewController;
     vc.name = self.nameTextField.text;
 }
 
+//This viewcontroller will receive the rewind
 - (BOOL)shouldPerformSegueWithIdentifier:(NSString *)identifier sender:(id)sender
 {
     if ([identifier isEqualToString:@"toAdjectiveSegue"])
     {
-
+        //if the textfield is NOT null or empty return NO otherwise let it through
         if (!(self.nameTextField.text && self.nameTextField.text.length > 0))
         {
             return NO;

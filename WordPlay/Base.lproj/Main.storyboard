@@ -352,19 +352,21 @@
                                 </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="kjlfjdklsf" translatesAutoresizingMaskIntoConstraints="NO" id="cAM-rE-4bs">
-                                <rect key="frame" x="0.0" y="60" width="320" height="139"/>
+                                <rect key="frame" x="0.0" y="64" width="320" height="124"/>
                                 <color key="backgroundColor" white="1" alpha="0.5" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="124" id="DpO-Fx-eyS"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="cAM-rE-4bs" secondAttribute="trailing" constant="-16" id="5fr-Kd-ODd"/>
-                            <constraint firstItem="cAM-rE-4bs" firstAttribute="top" secondItem="ZOa-O6-euQ" secondAttribute="topMargin" constant="60" id="6c2-Q9-ZHg"/>
                             <constraint firstAttribute="centerX" secondItem="oQV-T5-nPV" secondAttribute="centerX" id="Gxh-rg-2pr"/>
                             <constraint firstAttribute="centerY" secondItem="oQV-T5-nPV" secondAttribute="centerY" id="Mmc-Fs-Re2"/>
-                            <constraint firstItem="oQV-T5-nPV" firstAttribute="top" secondItem="cAM-rE-4bs" secondAttribute="bottom" constant="70" id="ah7-Sw-zp6"/>
+                            <constraint firstItem="cAM-rE-4bs" firstAttribute="top" secondItem="QZA-w1-Wh0" secondAttribute="bottom" id="PxA-7t-pL3"/>
                             <constraint firstItem="cAM-rE-4bs" firstAttribute="leading" secondItem="ZOa-O6-euQ" secondAttribute="leadingMargin" constant="-16" id="mYb-9h-J0e"/>
                         </constraints>
                     </view>

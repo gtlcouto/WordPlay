@@ -2,8 +2,8 @@
 //  EnterAdjectiveViewController.m
 //  WordPlay
 //
-//  Created by Yi-Chin Sun on 1/6/15.
-//  Copyright (c) 2015 Yi-Chin Sun. All rights reserved.
+//  Created by Yi-Chin Sun and Gustavo Couto on 1/6/15.
+//  Copyright (c) 2015 Yi-Chin Sun and Gustavo Couto. All rights reserved.
 //
 
 #import "EnterAdjectiveViewController.h"
@@ -20,13 +20,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    UIImage *buttonImage = [[UIImage imageNamed:@"blackButton.png"]
-                            resizableImageWithCapInsets:UIEdgeInsetsMake(20, 20, 20, 20)];
-    UIImage *buttonImageHighlight = [[UIImage imageNamed:@"blackButtonHighlight.png"]
-                                     resizableImageWithCapInsets:UIEdgeInsetsMake(20, 20, 20, 20)];
-    // Set the background for any states you plan to use
-    [self.nextButton setBackgroundImage:buttonImage forState:UIControlStateNormal];
-    [self.nextButton setBackgroundImage:buttonImageHighlight forState:UIControlStateHighlighted];
+
 }
 
 - (void)didReceiveMemoryWarning {
@@ -34,6 +28,7 @@
     // Dispose of any resources that can be recreated.
 }
 
+//preparing for segue to -> verb
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     EnterVerbViewController *vc = segue.destinationViewController;
@@ -41,11 +36,12 @@
     vc.adjective = self.adjectiveTextField.text;
 }
 
+//wont let the segue go through if the condition is not met
 - (BOOL)shouldPerformSegueWithIdentifier:(NSString *)identifier sender:(id)sender
 {
     if ([identifier isEqualToString:@"toVerbSegue"])
     {
-
+        //if its NOT null or empty dont go through
         if (!(self.adjectiveTextField.text && self.adjectiveTextField.text.length > 0))
         {
             return NO;
