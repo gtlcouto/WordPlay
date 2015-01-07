@@ -29,33 +29,27 @@
     // Dispose of any resources that can be recreated.
 }
 
-//name: makeAttributed
-//returns: NSMutableAttributedString *
+//name: makeBoldAttributed
+//returns: NSAttributedString *
 //takes: NSString *
 //description: transforms a string into an attributed string BOLD
--(NSMutableAttributedString *)makeAttributed:(NSString *)replacedString{
-    NSMutableAttributedString * attString = [[NSMutableAttributedString alloc] initWithString:replacedString];
+-(NSAttributedString *)makeBoldAttributed:(NSString *)replacedString{
+    UIFont *boldFont = [UIFont fontWithName:@"Helvetica-Bold" size:20.0];
+    NSAttributedString *atString = [[NSAttributedString alloc] initWithString:replacedString attributes:@{NSFontAttributeName:boldFont}];
 
-    [attString addAttribute:NSFontAttributeName
-                      value:[UIFont fontWithName:@"Helvetica-Bold" size:22.0]
-                      range:NSMakeRange(0,replacedString.length)];
-
-    return attString;
+    return atString;
 
 }
 
-//name: makeAttributedSimple
-//returns: NSMutableAttributedString *
+//name: makeSimpleAttributed
+//returns: NSAttributedString *
 //takes: NSString *
 //description: transforms a string into an attributed string NON BOLD
--(NSMutableAttributedString *)makeAttributedSimple:(NSString *)replacedString{
-    NSMutableAttributedString * attString = [[NSMutableAttributedString alloc] initWithString:replacedString];
+-(NSAttributedString *)makeSimpleAttributed:(NSString *)replacedString{
+    UIFont *font = [UIFont fontWithName:@"Helvetica" size:20.0];
+    NSAttributedString *atString = [[NSAttributedString alloc] initWithString:replacedString attributes:@{NSFontAttributeName:font}];
 
-    [attString addAttribute:NSFontAttributeName
-                      value:[UIFont fontWithName:@"Helvetica" size:20.0]
-                      range:NSMakeRange(0,replacedString.length)];
-
-    return attString;
+    return atString;
 }
 
 
@@ -66,17 +60,19 @@
 //description: append all of the attributed strings created by the helper methods makeAttributed and makeAttributedSimple
 -(NSMutableAttributedString *)createStory {
 
-    NSMutableAttributedString *story = [[NSMutableAttributedString alloc] initWithAttributedString:[self makeAttributedSimple:@"This morning "]];
-    [story appendAttributedString:[self makeAttributed:self.name]];
-    [story appendAttributedString:[self makeAttributedSimple:@" checked tomorrow's "]];
-    [story appendAttributedString:[self makeAttributed:self.adjective]];
-    [story appendAttributedString:[self makeAttributedSimple:@" coding challenge to "]];
-    [story appendAttributedString:[self makeAttributed:self.verb]];
-    [story appendAttributedString:[self makeAttributedSimple:@" if programming "]];
-    [story appendAttributedString:[self makeAttributed:self.adverb]];
-    [story appendAttributedString:[self makeAttributedSimple:@" would help."]];
+
+    NSMutableAttributedString *story = [[NSMutableAttributedString alloc] initWithAttributedString:[self makeSimpleAttributed:@"This morning "]];
+    [story appendAttributedString:[self makeBoldAttributed:self.name]];
+    [story appendAttributedString:[self makeSimpleAttributed:@" checked tomorrow's "]];
+    [story appendAttributedString:[self makeBoldAttributed:self.adjective]];
+    [story appendAttributedString:[self makeSimpleAttributed:@" coding challenge to "]];
+    [story appendAttributedString:[self makeBoldAttributed:self.verb]];
+    [story appendAttributedString:[self makeSimpleAttributed:@" if programming "]];
+    [story appendAttributedString:[self makeBoldAttributed:self.adverb]];
+    [story appendAttributedString:[self makeSimpleAttributed:@" would help."]];
 
     return story;
+
 }
 
 //Useless function was used to replace strings with the correct ammount of "-"
