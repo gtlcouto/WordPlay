@@ -11,6 +11,7 @@
 
 @interface EnterAdverbViewController ()
 @property (strong, nonatomic) IBOutlet UITextField *adverbTextField;
+@property (weak, nonatomic) IBOutlet UIButton *seeLibButton;
 
 @end
 
@@ -18,7 +19,13 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+       UIImage *buttonImage = [[UIImage imageNamed:@"blackButton.png"]
+                                resizableImageWithCapInsets:UIEdgeInsetsMake(20, 20, 20, 20)];
+    UIImage *buttonImageHighlight = [[UIImage imageNamed:@"blackButtonHighlight.png"]
+                                     resizableImageWithCapInsets:UIEdgeInsetsMake(20, 20, 20, 20)];
+    // Set the background for any states you plan to use
+    [self.seeLibButton setBackgroundImage:buttonImage forState:UIControlStateNormal];
+    [self.seeLibButton setBackgroundImage:buttonImageHighlight forState:UIControlStateHighlighted];
 }
 
 - (void)didReceiveMemoryWarning {

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="6Z0-tK-fVp">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="6Z0-tK-fVp">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -17,38 +17,40 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dvb-zs-8Ro">
-                                <rect key="frame" x="83" y="269" width="154" height="30"/>
-                                <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="0.45000000000000001" colorSpace="calibratedRGB"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="madLibsLogo" translatesAutoresizingMaskIntoConstraints="NO" id="XyG-eP-crR">
+                                <rect key="frame" x="16" y="137" width="288" height="95"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="B3X-MR-RYJ"/>
-                                    <constraint firstAttribute="width" constant="154" id="i7B-Mb-rCW"/>
+                                    <constraint firstAttribute="height" constant="95" id="WRR-fD-9E8"/>
+                                    <constraint firstAttribute="width" constant="288" id="f47-UT-ooo"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dvb-zs-8Ro">
+                                <rect key="frame" x="66" y="265" width="189" height="38"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="38" id="B3X-MR-RYJ"/>
+                                    <constraint firstAttribute="width" constant="189" id="i7B-Mb-rCW"/>
+                                </constraints>
                                 <state key="normal" title="Let's play mad libs!">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <segue destination="SuV-Bh-oeT" kind="push" id="12p-WZ-abv"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="madLibsLogo" translatesAutoresizingMaskIntoConstraints="NO" id="XyG-eP-crR">
-                                <rect key="frame" x="16" y="140" width="288" height="95"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="95" id="WRR-fD-9E8"/>
-                                    <constraint firstAttribute="width" constant="288" id="f47-UT-ooo"/>
-                                </constraints>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="centerX" secondItem="XyG-eP-crR" secondAttribute="centerX" id="IK8-SF-Aqp"/>
                             <constraint firstAttribute="centerY" secondItem="Dvb-zs-8Ro" secondAttribute="centerY" id="Odc-9e-PFG"/>
-                            <constraint firstItem="Dvb-zs-8Ro" firstAttribute="top" secondItem="XyG-eP-crR" secondAttribute="bottom" constant="34" id="Wpk-OS-gvr"/>
+                            <constraint firstItem="Dvb-zs-8Ro" firstAttribute="top" secondItem="XyG-eP-crR" secondAttribute="bottom" constant="33" id="Wpk-OS-gvr"/>
                             <constraint firstAttribute="centerX" secondItem="Dvb-zs-8Ro" secondAttribute="centerX" id="b8R-Q6-bQ0"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Eey-LD-XaH"/>
+                    <connections>
+                        <outlet property="startButton" destination="Dvb-zs-8Ro" id="L05-bK-iOp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
@@ -77,12 +79,12 @@
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kJ3-Wh-BAv">
                                 <rect key="frame" x="133" y="244" width="54" height="30"/>
-                                <color key="backgroundColor" white="1" alpha="0.5" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="54" id="DOh-XA-LKc"/>
                                     <constraint firstAttribute="height" constant="30" id="Fcg-4C-dUU"/>
                                 </constraints>
                                 <state key="normal" title="Next">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -113,6 +115,7 @@
                     <navigationItem key="navigationItem" id="gFU-gk-i0m"/>
                     <connections>
                         <outlet property="nameTextField" destination="eG3-EJ-Nze" id="TXB-Kg-zWe"/>
+                        <outlet property="nextButton" destination="kJ3-Wh-BAv" id="GwY-ny-KhG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dA7-gC-ymH" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -143,12 +146,12 @@
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VJJ-6Q-bbl">
                                 <rect key="frame" x="133" y="244" width="54" height="30"/>
-                                <color key="backgroundColor" white="1" alpha="0.5" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="54" id="V7O-Ze-8yq"/>
                                     <constraint firstAttribute="height" constant="30" id="g03-fq-eH6"/>
                                 </constraints>
                                 <state key="normal" title="Next">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -178,6 +181,7 @@
                     <navigationItem key="navigationItem" id="erg-HU-ksY"/>
                     <connections>
                         <outlet property="adjectiveTextField" destination="CzI-eF-5Z7" id="Lam-cD-CwE"/>
+                        <outlet property="nextButton" destination="VJJ-6Q-bbl" id="z1l-nU-YX8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="poN-ZZ-A5N" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -208,12 +212,12 @@
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bIY-SZ-FDM">
                                 <rect key="frame" x="135" y="244" width="51" height="30"/>
-                                <color key="backgroundColor" white="1" alpha="0.5" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="51" id="kkH-EZ-PqY"/>
                                     <constraint firstAttribute="height" constant="30" id="rBQ-G5-qUV"/>
                                 </constraints>
                                 <state key="normal" title="Next">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -242,7 +246,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="pKU-p6-Bbt"/>
                     <connections>
-                        <outlet property="verbTextField" destination="Lve-4x-ET5" id="J2i-lR-syR"/>
+                        <outlet property="nextButton" destination="bIY-SZ-FDM" id="Prc-If-B8O"/>
+                        <outlet property="verbTextField" destination="Lve-4x-ET5" id="TwX-xU-2oV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Akf-Q1-weS" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -286,12 +291,12 @@
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n0E-gW-Glr">
                                 <rect key="frame" x="95" y="244" width="130" height="30"/>
-                                <color key="backgroundColor" white="1" alpha="0.5" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="130" id="9ca-OI-mar"/>
                                     <constraint firstAttribute="height" constant="30" id="la9-rJ-cHf"/>
                                 </constraints>
                                 <state key="normal" title="See my mad lib!">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -313,6 +318,7 @@
                     <navigationItem key="navigationItem" id="lP1-qf-zuV"/>
                     <connections>
                         <outlet property="adverbTextField" destination="Ycj-fS-bc8" id="IY3-OU-wzL"/>
+                        <outlet property="seeLibButton" destination="n0E-gW-Glr" id="GII-p9-as5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TiY-Fr-8qW" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -333,12 +339,12 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oQV-T5-nPV">
                                 <rect key="frame" x="110" y="269" width="101" height="30"/>
-                                <color key="backgroundColor" white="1" alpha="0.5" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="101" id="D3L-qY-U2r"/>
                                     <constraint firstAttribute="height" constant="30" id="LXD-Bb-2Uo"/>
                                 </constraints>
                                 <state key="normal" title="Start Over">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -365,6 +371,7 @@
                     <navigationItem key="navigationItem" id="qbI-cC-aTk"/>
                     <connections>
                         <outlet property="resultsTextView" destination="cAM-rE-4bs" id="F6h-BV-OEw"/>
+                        <outlet property="startOverButton" destination="oQV-T5-nPV" id="UgA-fv-YK0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ihq-D3-RDp" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -399,5 +406,5 @@
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
-    <color key="tintColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
+    <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
 </document>

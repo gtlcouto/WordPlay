@@ -10,6 +10,7 @@
 
 @interface ResultsViewController ()
 @property (strong, nonatomic) IBOutlet UITextView *resultsTextView;
+@property (weak, nonatomic) IBOutlet UIButton *startOverButton;
 
 @end
 
@@ -19,6 +20,14 @@
     [super viewDidLoad];
 
     self.resultsTextView.attributedText = [self createStory];
+
+    UIImage *buttonImage = [[UIImage imageNamed:@"blackButton.png"]
+                            resizableImageWithCapInsets:UIEdgeInsetsMake(20, 20, 20, 20)];
+    UIImage *buttonImageHighlight = [[UIImage imageNamed:@"blackButtonHighlight.png"]
+                                     resizableImageWithCapInsets:UIEdgeInsetsMake(20, 20, 20, 20)];
+    // Set the background for any states you plan to use
+    [self.startOverButton setBackgroundImage:buttonImage forState:UIControlStateNormal];
+    [self.startOverButton setBackgroundImage:buttonImageHighlight forState:UIControlStateHighlighted];
 
 }
 

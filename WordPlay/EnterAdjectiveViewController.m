@@ -11,6 +11,8 @@
 
 @interface EnterAdjectiveViewController ()
 @property (strong, nonatomic) IBOutlet UITextField *adjectiveTextField;
+@property (weak, nonatomic) IBOutlet UIButton *nextButton;
+
 
 @end
 
@@ -18,7 +20,13 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    UIImage *buttonImage = [[UIImage imageNamed:@"blackButton.png"]
+                            resizableImageWithCapInsets:UIEdgeInsetsMake(20, 20, 20, 20)];
+    UIImage *buttonImageHighlight = [[UIImage imageNamed:@"blackButtonHighlight.png"]
+                                     resizableImageWithCapInsets:UIEdgeInsetsMake(20, 20, 20, 20)];
+    // Set the background for any states you plan to use
+    [self.nextButton setBackgroundImage:buttonImage forState:UIControlStateNormal];
+    [self.nextButton setBackgroundImage:buttonImageHighlight forState:UIControlStateHighlighted];
 }
 
 - (void)didReceiveMemoryWarning {
